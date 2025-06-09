@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora UTM / UF / Euro</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body><!--NAVBAR-->
+    <nav class="navbar">
+        <a href="index.html"><img src="img/logo_banco.png" alt="Logo Banco Austral" class="logo-navbar"></a>
+        <a href="index.html">Inicio</a>
+        <a href="calculador_utm.html">Calculadora UTM/UF/Euro</a>
+
+
+
+
+    </nav><!--FORMUALRIO CALCULADOR DE MONEDAS-->
+    <div class="container">
+        <h2>Calculadora UTM / UF / Euro</h2>
+        <form id="formMonedas" class="form-horizontal">
+            <div class="campo">
+                <label>Monto en CLP
+                    <input type="number" id="monto" min="0" step="any" required>
+                </label>
+            </div>
+            <div class="campo">
+                <label>Convertir a:
+                    <select id="moneda">
+                        <option value="utm">UTM</option>
+                        <option value="uf">UF</option>
+                        <option value="euro">Euro</option>
+                    </select>
+                </label>
+            </div>
+            <div class="campo">
+                <button type="submit">Calcular</button>
+            </div>
+        </form>
+        <div id="resultado" style="margin-top:15px; font-weight: bold;"></div>
+
+
+
+
+
+    <!--IMAGENES DE ABAJO CON LINKS DE DIRECCION-->    
+    </div>
+      <div class="logo-footer" style="display: flex; justify-content: center; height: 800px;">
+     <a href="registro.html"> <img src="img/joven.png" alt="Logo Banco Austral" height="500px" ></a>
+  </div>
+    <script src="script.js"></script>
+</body>
+</html>

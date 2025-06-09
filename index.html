@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Banco Demo - Inicio</title>
+  <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+
+
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <a href="index.html"><img src="img/logo_banco.png" alt="Logo Banco Austral" class="logo-navbar"></a>
+    <a href="index.html">Inicio</a>
+    <a href="calculador_utm.html">Calculador UTM-UF-EURO</a>
+  </nav>
+
+  <!-- REGISTRO -->
+  <div class="container">
+    <h1>Bienvenido a Banco Austral</h1>
+    <p>Su banco de confianza para todas sus necesidades financieras.</p>
+    <a href="registro.html"><button type="button">Registrarse aquí</button></a>
+    <div id="fechaNacimientoDiv" style="display:none; margin-top:15px;">
+      <label>Ingrese su fecha de nacimiento:
+        <input type="date" id="fechaNacimiento" required>
+      </label>
+      <button id="validarEdadBtn">Validar Edad</button>
+    </div>
+    <div id="resultadoEdad" style="margin-top:12px;"></div>
+    
+
+    <!-- SIMULAR UN CREDITO -->
+    <hr>
+    <h2>Simulador de Crédito</h2>
+    <form id="formCredito" class="form-horizontal">
+      <div class="campo">
+        <label>Monto solicitado
+          <input type="number" id="montoCredito" required min="100000">
+        </label>
+      </div>
+      <div class="campo">
+        <label>Plazo (meses)
+          <input type="number" id="plazoMeses" required min="3" max="60">
+        </label>
+      </div>
+      <div class="campo">
+        <label>Tasa anual (%)
+          <input type="number" id="tasaInteres" required min="0" step="0.01" value="12">
+        </label>
+      </div>
+      <div class="campo">
+        <button type="submit">Simular</button>
+      </div>
+    </form>
+    <div id="resultadoCredito"></div>
+    <div class="logos-footer">
+      <a href="direccion.html"><img src="img/direccion.png" alt="Logo Banco Austral"></a>
+      <a href="registro.html"><img src="img/abuelo.png" alt="Logo Banco Austral"></a>
+    </div>
+  </div>
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro de Personas</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <a href="inicio.html"><img src="img/logo_banco.png" alt="Logo Banco Austral" class="logo-navbar"></a>
+        <a href="inicio.html">Inicio</a>
+        <a href="calculador_utm.html">Calculador UTM-UF-EURO</a>
+    </nav>
+
+    <!-- FORMULARIO DE REGISTRO -->
+    <div class="container">
+        <h2>Registro de Personas</h2>
+        <!-- boton para mostrar/ocultar el formulario -->
+        <button id="toggleFormBtn">Mostrar/Ocultar Registro</button>
+        <div id="registroDiv" style="margin-top: 20px;">
+            <form id="registroForm" class="form-horizontal" autocomplete="off">
+                <div class="campo">
+                    <label>Nombre
+                        <input type="text" id="nombre" required>
+                        <span class="error" id="nombreError"></span>
+                    </label>
+                </div>
+                <div class="campo">
+                    <label>RUT
+                        <input type="text" id="rut" required>
+                        <span class="error" id="rutError"></span>
+                    </label>
+                </div>
+                <div class="campo">
+                    <label>Fecha de nacimiento
+                        <input type="date" id="fechaNacimiento" required>
+                        <span id="edadMostrada" style="margin-left: 10px; color: #0984e3;"></span>
+                    </label>
+                    <span class="error" id="fechaNacimientoError"></span>
+                </div>
+                <div class="campo">
+                    <label>Correo
+                        <input type="email" id="correo" required>
+                        <span class="error" id="correoError"></span>
+                    </label>
+                </div>
+                <div class="campo">
+                    <label>Contraseña
+                        <input type="password" id="contrasena" required>
+                        <span class="error" id="contrasenaError"></span>
+                    </label>
+                </div>
+                <button type="submit">Registrar</button>
+                <div id="mensajeError" style="color: red; margin-top: 10px;"></div>
+            </form>
+        </div>
+
+        <!-- TABLA DE PERSONAS REGISTRADAS -->
+        <h3 style="margin-top:30px;">Personas registradas</h3>
+        <table id="tablaPersonas" border="1" style="width:100%; margin-top:10px;">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>RUT</th>
+                    <th>Correo</th>
+                    <th>Fecha de nacimiento</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Aquí se insertan las personas -->
+            </tbody>
+        </table>
+    </div>
+
+    <!--FOTOS DE ABAJO CON LINKS-->    
+    <div class="logos-footer">
+        <a href="direccion.html"><img src="img/direccion.png" alt="Logo Banco Austral"></a>
+        <a href="registro.html"><img src="img/mano_logo.png" alt="Logo Banco Austral"></a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
